@@ -1,56 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inicio - Lewis Hamilton</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Inicio - Lewis Hamilton</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- NAV (presente en todas las páginas) -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="logo" href="index.html">LEWIS HAMILTON</a>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="perfil.html">Perfil</a>
-        <a href="galeria.html">Galería</a>
-        <a href="blog.html">Blog</a>
-      </nav>
+    <header class="topnav">
+        <h2 style="color:white;">LEWIS HAMILTON</h2>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="galeria.html">Galería</a>
+            <a href="blog.html">Blog</a>
+            <a href="CV_Hamilton.pdf" download>Descargar CV</a>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <h1 class="titulo-rotativo">Bienvenido al Sitio de Lewis Hamilton</h1>
+
+        <p>En esta página encontrarás información completa del piloto Lewis Hamilton, incluyendo su biografía, carrera deportiva, galería e hitos profesionales.</p>
+
+        <br>
+
+        <!-- 5 Botones animados -->
+        <a class="btn" href="perfil.html">Perfil Profesional</a>
+        <a class="btn" href="galeria.html">Galería</a>
+        <a class="btn" href="blog.html">Blog Profesional</a>
+        <a class="btn" href="CV_Hamilton.pdf" download>Descargar CV</a>
+        <a class="btn" href="https://www.formula1.com/" target="_blank">F1</a>
     </div>
-  </header>
 
-  <main class="container">
-    <section class="hero symmetric-box">
-      <h1 class="page-title rotar">LEWIS HAMILTON</h1>
-      <p class="lead">Sitio creado por DAYS BRITOS — Perfil profesional, galería, blog y CV descargable.</p>
-
-      <!-- cinco botones animados -->
-      <div class="buttons-row">
-        <a class="btn btn-1" href="perfil.html">Perfil</a>
-        <a class="btn btn-2" href="galeria.html">Galería</a>
-        <a class="btn btn-3" href="blog.html">Blog</a>
-        <a class="btn btn-4 boton-cambiar" id="botonCambiante" href="#">Botón Cambiante</a>
-        <a class="btn btn-5" href="cv/CV_Hamilton.pdf" download>Descargar CV</a>
-      </div>
-
-      <!-- caja con ciclo de colores -->
-      <div class="caja-ciclo">Caja ciclo colores</div>
-
-      <!-- texto con velocidad variable -->
-      <p class="texto-velocidad velocidad-rapida">Texto velocidad rápida</p>
-      <p class="texto-velocidad velocidad-lenta">Texto velocidad lenta</p>
-    </section>
-
-    <section class="description symmetric-box">
-      <h2 class="section-title">Contenido del sitio</h2>
-      <p>En Perfil encontrarás biografía, trayectoria en tabla y enlace al CV. En Galería verás 8 imágenes con animaciones. En Blog encontrarás 3 artículos con "Leer más" que dirigen a fuentes externas.</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© DAYS BRITOS — 13/11/2025</p>
-  </footer>
+    <footer>© 2025 — Daysi Britos </footer>
 </body>
 </html>
+
