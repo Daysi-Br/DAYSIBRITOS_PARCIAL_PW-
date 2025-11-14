@@ -1,117 +1,188 @@
-:root{
-  --fucsia: #ff66b2;
-  --fondo: #0b0f12;
-  --texto: #eef6fb;
-  --card: #111418;
-  --accent: #ff8fbd;
-  --trans: .28s;
-  --shadow: 0 8px 28px rgba(0,0,0,.6);
+/* ———— ESTILO GLOBAL ———— */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-*{box-sizing:border-box}
-body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--fondo);color:var(--texto);-webkit-font-smoothing:antialiased}
-.nav{background:#071016;position:sticky;top:0;z-index:50;border-bottom:3px solid rgba(255,102,178,.06)}
-.nav-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
-.logo{color:var(--fucsia);font-weight:800;letter-spacing:1px;text-decoration:none}
-.nav-inner nav a{color:var(--texto);text-decoration:none;margin-left:12px;padding:6px 10px;border-radius:8px;transition:background var(--trans)}
-.nav-inner nav a:hover{background:rgba(255,102,178,.08);color:var(--accent)}
+body{
+    background:#ffd6f2; /* Fucsia claro */
+    color:#333;
+}
 
-/* container */
-.container{max-width:1100px;margin:28px auto;padding:0 16px}
-.symmetric-box{background:var(--card);border-radius:12px;padding:18px;margin-bottom:18px;box-shadow:var(--shadow)}
+/* ———— MENÚ ———— */
+.topnav{
+    width:100%;
+    background:#ff77c3;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
 
-/* title effects (ONLY titles) */
-.page-title,.section-title,h1,h2{color:var(--fucsia);margin:0 0 12px 0}
-.page-title{font-size:2.2rem;text-align:center;animation:tilt 6s linear infinite}
-.section-title{font-size:1.4rem;animation:tilt 8s linear infinite}
-@keyframes tilt{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(2deg) translateY(-4px)}100%{transform:rotate(0deg) translateY(0)}}
+.topnav nav a{
+    margin:0 10px;
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+    transition:.3s;
+}
 
-/* hero */
-.hero{padding:28px;text-align:center}
-.lead{color:#ffdff0;max-width:800px;margin:8px auto}
+.topnav nav a:hover{
+    color:#2b2b2b;
+}
 
-/* buttons */
-.buttons-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px}
-.btn{background:var(--fucsia);color:#0b0f12;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;transition:transform .25s ease,box-shadow .25s ease}
-.btn:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(255,102,178,.12)}
-.btn-1{animation:btnSlide 3s ease-in-out infinite}
-@keyframes btnSlide{0%{transform:translateX(0)}50%{transform:translateX(4px)}100%{transform:translateX(0)}}
-.btn-2{animation:btnPulse 2.6s infinite}
-@keyframes btnPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.btn-3{animation:btnRotate 5s linear infinite}
-@keyframes btnRotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
-.btn-4{transition: transform .6s, background .6s}
-.btn-5{animation:btnShadow 4s ease-in-out infinite}
-@keyframes btnShadow{0%{box-shadow:0 0 0 rgba(0,0,0,0)}50%{box-shadow:0 14px 30px rgba(255,102,178,.06)}100%{box-shadow:0 0 0 rgba(0,0,0,0)}}
+/* ———— TÍTULO ROTATIVO (pedidos del trabajo) ———— */
+.titulo-rotativo{
+    text-align:center;
+    font-size:35px;
+    margin:20px 0;
+    animation:rotar 6s linear infinite;
+}
 
-/* boton cambiante */
-.boton-cambiar.clicked{background:#ff2f8a;transform:scale(1.12);box-shadow:0 18px 40px rgba(255,47,138,.18)}
+@keyframes rotar{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
 
-/* caja ciclo colores */
-.caja-ciclo{width:220px;height:80px;margin:18px auto;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;animation:cicloColor 6s linear infinite}
-@keyframes cicloColor{0%{background:var(--fucsia);color:#2a0018}33%{background:#ffb3d6;color:#2a0018}66%{background:#ffd6ea;color:#2a0018}100%{background:var(--fucsia);color:#2a0018}}
+/* ———— BOTONES ANIMADOS ———— */
+.btn{
+    display:inline-block;
+    background:#ff2e9a;
+    padding:12px 20px;
+    margin:8px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
 
-/* texto velocidad variable */
-.texto-velocidad{display:inline-block;margin:8px 6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.02)}
-.velocidad-rapida{animation:sube 1.8s ease-in-out infinite}
-.velocidad-lenta{animation:sube 4.2s ease-in-out infinite}
-@keyframes sube{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+/* cambio de tamaño con hover */
+.btn:hover{
+    transform:scale(1.15);
+}
 
-/* gallery */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
-.foto{position:relative;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.2))}
-.foto img{width:100%;height:260px;object-fit:cover;display:block;transition:transform .35s ease}
-.foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;display:flex;justify-content:space-between;align-items:center}
-.foto .desc{opacity:0;transform:translateY(6px);transition:all .25s ease}
-.foto:hover img{transform:scale(1.06)}
-.foto:hover .desc{opacity:1;transform:translateY(0)}
+/* Botón cambiante al hacer clic */
+.btn:active{
+    background:#ff8ed6;
+    transform:scale(1.3);
+}
 
-/* 8 animations */
-.anim-a img{animation:scalePulse 4s ease-in-out infinite}
-@keyframes scalePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-.anim-b img{animation:rotateSlight 6s linear infinite}
-@keyframes rotateSlight{0%{transform:rotate(0)}50%{transform:rotate(2deg)}100%{transform:rotate(0)}}
-.anim-c img{filter:grayscale(.2);transition:filter .35s}
-.anim-c:hover img{filter:grayscale(0)}
-.anim-d img{animation:slideX 5s ease-in-out infinite}
-@keyframes slideX{0%{transform:translateX(0)}50%{transform:translateX(6px)}100%{transform:translateX(0)}}
-.anim-e img{animation:floatY 6s ease-in-out infinite}
-@keyframes floatY{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
-.anim-f img{transition:transform .4s}
-.anim-f:hover img{transform:scale(1.08) rotate(-2deg)}
-.anim-g img{filter:brightness(.9);transition:filter .4s}
-.anim-g:hover img{filter:brightness(1.1)}
-.anim-h img{animation:zoomIn 7s linear infinite}
-@keyframes zoomIn{0%{transform:scale(1)}100%{transform:scale(1.02)}}
+/* ———— CONTENEDOR ———— */
+.contenedor{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px 0;
+}
 
-/* table */
-.career-table{width:100%;border-collapse:collapse;margin-top:12px}
-.career-table th,.career-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,.03)}
-.career-table th{background:var(--fucsia);color:#2a0018;position:relative;animation:encabezadoAnim 3s ease-in-out infinite}
-@keyframes encabezadoAnim{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+/* ———— TABLA 3×5 ———— */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
 
-/* socials */
-.socials{display:flex;gap:10px;align-items:center;margin-top:12px}
-.social{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.02);color:var(--texto);text-decoration:none;font-weight:700;transition:all .25s}
-.social:hover{transform:translateY(-6px)}
-.icon-instagram:hover{background:#e1306c;color:white}
-.icon-twitter:hover{background:#1da1f2;color:white}
-.icon-facebook:hover{background:#1877f2;color:white}
-.icon-pdf:hover{background:#ffbf00;color:#072026}
+th,td{
+    border:2px solid #ff2e9a;
+    padding:12px;
+}
 
-/* blog posts reveal */
-.blog-list{max-width:1100px;margin:0 auto;padding:16px;display:flex;flex-direction:column;gap:18px}
-.post{display:flex;gap:12px;background:var(--card);padding:12px;border-radius:10px;opacity:0;transform:translateY(20px);transition:all .6s ease}
-.post img{width:220px;height:140px;object-fit:cover;border-radius:8px}
-.post.revealed{opacity:1;transform:translateY(0)}
-.leer-mas{display:inline-block;margin-top:8px;background:var(--fucsia);color:#0b0f12;padding:8px 12px;border-radius:8px;text-decoration:none}
+th{
+    background:#ff8ed6;
+    color:#000;
+    animation:rotar 8s linear infinite; /* título animado */
+}
 
-/* download btn */
-.btn-download{display:inline-block;background:var(--fucsia);color:#0b0f12;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;transition:all .25s}
-.btn-download:hover{transform:translateY(-6px)}
+/* ———— ICONOS SOCIALES ———— */
+.social{
+    display:inline-block;
+    padding:10px 15px;
+    margin:5px;
+    background:#ff2e9a;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+}
 
-/* footer */
-.footer{background:#06080a;padding:12px;text-align:center;color:rgba(255,255,255,.7);margin-top:28px;border-top:1px solid rgba(255,255,255,.02)}
+.social:hover{
+    background:#000;
+}
 
-/* responsive */
-@media(max-width:800px){.perfil-top{display:block}.perfil-left,.perfil-right{width:100%}.post{flex-direction:column}.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}}
+/* ———— GALERÍA (8 imágenes) ———— */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.item{
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    animation:colorCycle 6s infinite;
+}
+
+/* Ciclo de colores */
+@keyframes colorCycle{
+    0%{box-shadow:0 0 10px #ff2e9a;}
+    33%{box-shadow:0 0 10px #ff8ed6;}
+    66%{box-shadow:0 0 10px #ffbee8;}
+    100%{box-shadow:0 0 10px #ff2e9a;}
+}
+
+.item img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+/* zoom hover */
+.item:hover img{
+    transform:scale(1.2);
+}
+
+.item .info{
+    position:absolute;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    color:white;
+    padding:5px;
+    transform:translateY(100%);
+    transition:.3s;
+}
+
+/* mostrar descripción en hover */
+.item:hover .info{
+    transform:translateY(0);
+}
+
+/* ———— BLOG ———— */
+.blog-item{
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:15px;
+    animation:subir 1.5s ease;
+}
+
+@keyframes subir{
+    from{transform:translateY(50px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+
+/* ———— FOOTER ———— */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#ff77c3;
+    color:white;
+    margin-top:30px;
+    font-weight:bold;
+}
