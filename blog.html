@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog - Lewis Hamilton</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Blog Profesional - Lewis Hamilton</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="logo" href="index.html">LEWIS HAMILTON</a>
-      <nav>
+
+<header class="topnav">
+    <h2 style="color:white;">LEWIS HAMILTON</h2>
+    <nav>
         <a href="index.html">Inicio</a>
         <a href="perfil.html">Perfil</a>
         <a href="galeria.html">Galería</a>
         <a href="blog.html">Blog</a>
-      </nav>
+        <a href="CV_Hamilton.pdf" download>Descargar CV</a>
+    </nav>
+</header>
+
+<div class="contenedor">
+
+    <h1 class="titulo-rotativo">Blog Profesional</h1>
+
+    <!-- POST 1 -->
+    <div class="blog-item">
+        <h2>Primeros Años en McLaren</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYnjrWEgP7c1xljzHUBufK93bNCAXd7obEiS6_XXeMPyhlWBTmVXfyXu3YrSXu_dvZ7P3DOJ2Arhq14SvmVne6tIxf56_gdDdPzKS1A&s=10"
+             style="width:100%;border-radius:10px;">
+        <p>Hamilton debutó en 2007 logrando resultados impresionantes desde su primera temporada.</p>
+        <a class="btn" target="_blank" href="https://www.formula1.com/en/drivers/hall-of-fame.html">Leer más</a>
     </div>
-  </header>
 
-  <main class="container blog-list">
-    <article class="post to-reveal">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYnjrWEgP7c1xljzHUBufK93bNCAXd7obEiS6_XXeMPyhlWBTmVXfyXu3YrSXu_dvZ7P3DOJ2Arhq14SvmVne6tIxf56_gdDdPzKS1A&s=10" alt="">
-      <div>
-        <h2 class="section-title">Inicios: Karting y McLaren</h2>
-        <p>Descripción del inicio de la carrera, paso por karting y llegada a la Fórmula 1.</p>
-        <a class="leer-mas" href="https://en.wikipedia.org/wiki/Lewis_Hamilton" target="_blank" rel="noopener noreferrer">Leer más</a>
-      </div>
-    </article>
-
-    <article class="post to-reveal">
-      <img src="https://cdn-2.motorsport.com/images/mgl/2y3j5bg6/s800/lewis-hamilton-ferrari.jpg" alt="">
-      <div>
-        <h2 class="section-title">Éxito con Mercedes</h2>
-        <p>Descripción del período con Mercedes, campeonatos y récords.</p>
-        <a class="leer-mas" href="https://en.wikipedia.org/wiki/Lewis_Hamilton" target="_blank" rel="noopener noreferrer">Leer más</a>
-      </div>
-    </article>
-
-    <article class="post to-reveal">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/2025_Japan_GP_-_Ferrari_-_Lewis_Hamilton_-_Fanzone_Stage_%28cropped%29.jpg" alt="">
-      <div>
-        <h2 class="section-title">Actualidad y legado</h2>
-        <p>Descripción de su actualidad, proyectos y legado en la F1.</p>
-        <a class="leer-mas" href="https://www.formula1.com" target="_blank" rel="noopener noreferrer">Leer más</a>
-      </div>
-    </article>
-
-    <div class="download-row">
-      <a href="cv/CV_Hamilton.pdf" download class="btn-download">Descargar CV</a>
+    <!-- POST 2 -->
+    <div class="blog-item">
+        <h2>Dominio con Mercedes</h2>
+        <img src="https://cdn-2.motorsport.com/images/mgl/2y3j5bg6/s800/lewis-hamilton-ferrari.jpg"
+             style="width:100%;border-radius:10px;">
+        <p>Con Mercedes ganó la mayor parte de sus campeonatos, convirtiéndose en una leyenda.</p>
+        <a class="btn" target="_blank" href="https://www.mercedesamgf1.com/en/">Leer más</a>
     </div>
-  </main>
 
-  <footer class="footer">
-    <p>© DAYS BRITOS — 13/11/2025</p>
-  </footer>
+    <!-- POST 3 -->
+    <div class="blog-item">
+        <h2>Llegada a Ferrari</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/2025_Japan_GP_-_Ferrari_-_Lewis_Hamilton_-_Fanzone_Stage_%28cropped%29.jpg"
+             style="width:100%;border-radius:10px;">
+        <p>En 2025 Hamilton inicia una nueva etapa en Ferrari, generando grandes expectativas.</p>
+        <a class="btn" target="_blank" href="https://www.ferrari.com/en-EN/formula1">Leer más</a>
+    </div>
+
+</div>
+
+<footer>© 2025 — Daysi Britos </footer>
+
 </body>
 </html>
